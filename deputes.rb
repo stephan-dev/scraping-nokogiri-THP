@@ -29,10 +29,10 @@ end
 def getemail (urldeputy)
 	page = Nokogiri::HTML(open(urldeputy))
 	email = page.xpath('//*[@id="b1"]/ul[2]/li[1]/ul/li/a').text
-	puts email
 
 	nom = page.css('h1').text
-	puts nom
+	print nom + " : "
+	puts email
 
 end
 
